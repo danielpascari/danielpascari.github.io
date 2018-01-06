@@ -26,6 +26,76 @@
 </head>
 
 <body>
+    <div class="container" id="services">
+        <p class="title">serviciile noastre</p>
+        <div id="owl-services" class="owl-carousel owl-theme">
+            <div class="item">
+                <i class="fa fa-id-card"></i>
+                <p class="item-title">carduri<br>de vizită</p>
+                <p class="item-description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+            <div class="item">
+                <i class="fa fa-shirtsinbulk"></i>
+                <p class="item-title">logo<br>icons</p>
+                <p class="item-description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+            <div class="item">
+                <i class="fa fa-paper-plane"></i>
+                <p class="item-title">flyere &amp; afișe<br>broșuri</p>
+                <p class="item-description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+            <div class="item">
+                <i class="fa fa-calendar"></i>
+                <p class="item-title">calendar<br>personalizat</p>
+                <p class="item-description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+            <div class="item">
+                <i class="fa fa-align-center"></i>
+                <p class="item-title">landing<br>page</p>
+                <p class="item-description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+            <div class="item">
+                <i class="fa fa-briefcase"></i>
+                <p class="item-title">site<br>carte de vizită</p>
+                <p class="item-description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+            <div class="item">
+                <i class="fa fa-leanpub"></i>
+                <p class="item-title">web<br>catalog</p>
+                <p class="item-description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+            <div class="item">
+                <i class="fa fa-paint-brush"></i>
+                <p class="item-title">design<br>.psd</p>
+                <p class="item-description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Begin Portfolio -->
     <div class="container-fluid" id="portfolio">
         <div class="row" id="portfolio-header">
             <div class="col-md-offset-1 col-md-4">
@@ -40,12 +110,11 @@
                     <a href="#p-calendar" aria-controls="p-calendar" role="tab" data-toggle="tab">calendare</a>
                     <a href="#p-flyer" aria-controls="p-flyer" role="tab" data-toggle="tab">flyere &amp; afișe</a>
                     <a href="#p-brochure" aria-controls="p-brochure" role="tab" data-toggle="tab">broșuri</a>
-                    <a href="#p-shuffle" aria-controls="p-shuffle" role="tab" data-toggle="tab">shuffle</a>
                 </div>
             </div>
         </div>
         <div class="tab-content" id="portfolio-items">
-            <div role="tabpanel" class="tab-pane" id="p-web">
+            <div role="tabpanel" class="tab-pane active" id="p-web">
 
                 <div class="row">
                     <div class="col-md-3 col-sm-6 col-xs-6">
@@ -101,7 +170,7 @@
 
             </div>
 
-            <div role="tabpanel" class="tab-pane active" id="p-vcard">
+            <div role="tabpanel" class="tab-pane" id="p-vcard">
                 <div class="row">
                     <div class="col-md-2 col-sm-4 col-xs-6">
                         <a href="img/portfolio/cards/card-1.png" data-fancybox="cards" data-caption="Card de vizită simplu">
@@ -494,16 +563,12 @@
                     </div>
                 </div>
             </div>
-
-            <div role="tabpanel" class="tab-pane" id="p-shuffle">
-
-            </div>
-
         </div>
         <div class="row" id="portfolio-footer">
             <p><a href="#contact"> lasă un mesaj <i class="fa fa-long-arrow-right"></i></a></p>
         </div>
     </div>
+    <!-- Begin Team -->
     <div class="container-fluid">
         <div class="team-title">
             <p class="title">Echipa</p>
@@ -560,6 +625,7 @@
             </div>
         </div>
     </div>
+    <!-- Begin Testimonials -->
     <div class="container-fluid parallax-window" data-parallax="scroll" data-image-src="img/testimonials.jpg" id="testimonials-container">
         <div class="testimonials">
             <p class="title">Testimoniale</p>
@@ -601,6 +667,7 @@
             </div>
         </div>
     </div>
+    <!-- Begin Contact -->
     <div class="container-fluid" id="contact">
         <div class="row title">
             <p class="p1">Contacte</p>
@@ -644,6 +711,7 @@
             </div>
         </div>
     </div>
+    <!-- Begin footer -->
     <div class="container-fluid" id="footer">
         <div class="row top">
             <div class="col-md-1 col-md-offset-3">
@@ -726,6 +794,22 @@
                 },
                 1000: {
                     items: 1
+                }
+            }
+        });
+        $('#owl-services').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav:true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 4
                 }
             }
         })

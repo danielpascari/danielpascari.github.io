@@ -362,3 +362,77 @@ body{
 	transition: .3s ease-in-out
 }
 
+/*begin services*/
+
+#services{
+	color: #333;
+}
+
+#services .title{
+	margin-top: 60px;
+	margin-bottom: 60px;
+	text-align: center;
+	font-size: 30px;
+	text-transform: uppercase;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#services .item i{
+	display: block;
+	height: 36px;
+	width: 36px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	font-size: 36px;
+}
+
+#services .item .item-title{
+	margin-bottom: 20px;
+	font-family: 'Open Sans', sans-serif;
+	color: #e94c3d;
+	font-size: 18px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+#services .item .item-description{
+	text-align: center;
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+	margin-bottom: 60px;
+}
+
+#services .owl-nav{
+	width: 100%;
+	position: absolute;
+	top: 45px;
+	display: flex;
+	justify-content: space-between;
+}
+
+#services .owl-next,
+#services .owl-prev{
+	height: 40px;
+	width: 40px;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0px;
+	background-color: #b0b0b0;
+	transition: .3s ease-in-out;
+}
+#services .owl-next:hover,
+#services .owl-prev:hover{
+	background-color: #e94c3d;
+	transition: .3s ease-in-out;
+}
+
+#services .owl-prev{
+	margin-left: -3%;
+}
+
+#services .owl-next{
+	margin-right: -3%;
+}
