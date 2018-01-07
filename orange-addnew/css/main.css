@@ -478,13 +478,14 @@ body{
 /*begin about-1*/
 
 #about-1{
-	margin-top: 80px;
+	margin-top: 60px;
 	margin-bottom: 60px;
 }
 
 #about-1 .top{
 	width: 60%;
 	margin: 0 auto;
+	margin-top: 50px;
 }
 
 #about-1 .icons{
