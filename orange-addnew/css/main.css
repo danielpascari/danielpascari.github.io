@@ -474,3 +474,72 @@ body{
 	border-bottom: 2px solid #e94c3d;
 	transition: .4s ease-in-out;
 }
+
+/*begin about-1*/
+
+#about-1{
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+
+#about-1 .top{
+	width: 60%;
+	margin: 0 auto;
+}
+
+#about-1 .icons{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50px;
+	width: 50px;
+	margin: 0 auto;
+	border: 1px solid transparent;
+	transition: .4s ease-in-out;
+}
+
+#about-1 .icons{
+	color: #e94c3d;
+	font-size: 40px;
+}
+
+#about-1 .title{
+	color: #333;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 16px;
+	margin-top: 10px;
+	font-family: 'Open Sans', sans-serif;
+	transition: .3s ease-in-out;
+}
+
+#about-1 .top:hover .icons{
+	transform: rotate(-45deg);
+	border: 2px solid #333;
+	transition: .4s ease-in-out;
+}
+
+#about-1 .top:hover .title{
+	transition: .3s ease-in-out;
+	color: #e94c3d;
+}
+
+#about-1 .devider{
+	height: 1px;
+	width: 30%;
+	margin: 0 auto;
+	margin-top: 20px;
+	background: #333;
+}
+
+#about-1 .content{
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 60px;
+}
+
+#about-1 .content p{
+	color: #333;
+	text-align: center;
+}

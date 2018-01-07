@@ -49,8 +49,17 @@
 	}
 
 	/*begin about-2*/
+
 	#about-2 a{
 		width: 75%;
 	}
+	
+	/*begin about-1*/
+	
+	#about-1 .content{
+		width: 70%;
+	}
+}
+
 
 }
