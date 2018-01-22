@@ -38,6 +38,14 @@
 
 
 @media screen and (max-width: 767px) {
+
+	header {
+		height: auto;
+	}
+
+	.header-slider .item{
+	margin-bottom: 45px;
+	}
 	
 	/*begin testimonials*/
 
@@ -57,6 +65,19 @@
 		width: 70%;
 	}
 
+
+	.button, .button-invers {
+		margin: 15px 0;
+		width: 60%;
+		padding: 15px 0;
+
+	}
+
+
+	.nav-block{
+		display: block;
+	}
+	
 }
 
 /*begin navbar*/
@@ -77,13 +98,19 @@
 
 
 @media screen and (min-device-width: 992px) and (max-device-width: 9000px) { 
-   .navbar-nav{
-   	margin-left: 10%;
-   }
+  
 
    .nav > li > a {
         margin: 18px 8px;
    }
 
 
+}
+
+
+@media screen and (max-width: 480px) {
+
+	.header-slider .owl-nav{
+		display: none;
+	}
 }

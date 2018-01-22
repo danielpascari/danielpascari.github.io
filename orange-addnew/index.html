@@ -29,15 +29,18 @@
     <!-- begin header -->
     <header>
         <nav class="navbar navbar-default">
-          <div class="container">
+
+          <div class="nav-block">
+            
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <i class="fa fa-bars"></i>
               </button>
-              <a class="navbar-brand" href="#"><i>AddNew</i></a>
+              <a class="logo" href="">AddNew</a>
             </div>
+
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -48,11 +51,50 @@
                 <li><a href="#">echipa</a></li>
                 <li><a href="#">recenzii</a></li>
                 <li><a href="#">contacte</a></li>
-                <li><a href="#"><i class="fa fa-heart-o" style="font-size: 18px"></i></a></li>
+                <li><a href="#" class="social-menu"><i class="fa fa-heart-o"></i></a></li>
               </ul>
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
         </nav>
+
+        <div class="header-slider owl-carousel">
+
+            <div class="item">
+
+                <p class="intro">Clienții Noștri Prioritatea Noastră</p>
+
+                <h1 class="welcome">welcome to addnew</h1>
+
+                <span class="devider"><span></span></span>
+
+                <p class="content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium iure fuga nam magnam dolores consequuntur, ipsam, debitis quisquam quibusdam, autem ex eligendi aliquam tempore adipisci! A, explicabo impedit commodi nesciunt.
+                </p>
+
+                <a href="" class="button">începe</a>
+                <a href="" class="button-invers">mai mult</a>
+
+            </div>
+
+            <div class="item">
+
+                <p class="intro">Clienții Noștri Prioritatea Noastră</p>
+
+                <h1 class="welcome">welcome to addnew</h1>
+
+                <span class="devider"><span></span></span>
+
+                <p class="content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium iure fuga nam magnam dolores consequuntur, ipsam, debitis quisquam quibusdam, autem ex eligendi aliquam tempore adipisci! A, explicabo impedit commodi nesciunt.
+                </p>
+
+                <a href="" class="button">dsdsjkjdks</a>
+                <a href="" class="button-invers">dsdsjkjdks</a>
+
+            </div>
+
+        </div>
+        <div class="anchor"><i class="fa fa-anchor"></i></div>
     </header>
     <!-- begin about-1 -->
     <div class="container" id="about-1">
@@ -873,7 +915,7 @@
         </div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.js"></script>
     <!-- <script src="js/stickynav.js"></script> -->
@@ -914,6 +956,7 @@
                 }
             }
         });
+
         $('#owl-services').owlCarousel({
             loop: true,
             margin: 10,
@@ -929,11 +972,18 @@
                     items: 4
                 }
             }
-        })
+        });
 
-    </script>
-    <script>
-        document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+        $('.header-slider').owlCarousel({
+            loop: true,
+            nav: true,
+            items: 1,
+            // navContainer: '.header-slider'
+        });
+
+        $('.navbar-toggle').click(function(){
+            $(this).toggleClass('active');
+        });
 
     </script>
 </body>
