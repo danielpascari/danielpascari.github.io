@@ -78,6 +78,11 @@
 		display: block;
 	}
 	
+
+	.teammate img{
+		width: 50%;
+	}
+
 }
 
 /*begin navbar*/
@@ -113,4 +118,9 @@
 	.header-slider .owl-nav{
 		display: none;
 	}
+
+	.white-popup{
+		flex-direction: column;
+	}
+	
 }
