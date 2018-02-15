@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="img/fav-icon.png" type="image/x-icon">
+
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>DesignPlus</title>
 
@@ -27,7 +30,8 @@
 </head>
 
 <body>
-   
+   <!-- preloader -->
+    <div id="p_prldr"><div class="contpre"><span class="svg_anm"></span><br><small>Pagina se încarcă</small></div></div>
     <!-- Popup itself -->
     <div id="test-popup" class="white-popup mfp-with-anim mfp-hide">
 
@@ -812,35 +816,35 @@
             <div id="owl-testimonials" class="owl-carousel owl-theme">
                 <div class="item">
                     <p class="feed">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum ex, non natus. Fugit tempore officiis aliquam, temporibus excepturi deleniti molestiae, quaerat, odit, sed ratione explicabo impedit laboriosam cumque iure recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro nobis soluta id voluptates eaque tempora animi, dolore dolorem architecto qui iusto quae necessitatibus voluptatum fuga nam, dignissimos nihil repellat ut!
+                        Sunt foarte mulțumit de produsele primite de la această echipă, de și sunt tineri, au dat dovadă că în ei poți avea încredere. Ei au realizat toate produsele în timp și plus la toate mi-au creat o vedere nouă... nici eu nu vedeam mica mea companie cu un așa gust! Le mulțumesc foarte mult acestor tineri ambițioși, cu siguranță o să mă mai întorc la ei pentru alte proiecte.
                     </p>
                     <p class="pers">
-                        Slavec Miuzec
+                        Viziteu Roma
                     </p>
                     <p class="company">
-                        Formația Acordeon
+                        BeautyFlowers
                     </p>
                 </div>
                 <div class="item">
                     <p class="feed">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum ex, non natus. Fugit tempore officiis aliquam, temporibus excepturi deleniti molestiae, quaerat, odit, sed ratione explicabo impedit laboriosam cumque iure recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro nobis soluta id voluptates eaque tempora animi, dolore dolorem architecto qui iusto quae necessitatibus voluptatum fuga nam, dignissimos nihil repellat ut!
+                        Cînd prima dată am găsit publicitatea acestei echipe, m-a atras doar prețul și nu m-aș fi așteptat că pentru așa un preț pot primi un așa produs calitativ. Băieții știu de ce au nevoie antreprenorii, de aceea eu cred că ei vor crește rapid pe această piață. Cu siguranță îi pot recomanda, mai ales că ei pot să îi ajute și pe cei mici !
                     </p>
                     <p class="pers">
-                        Slavec Miuzec
+                        Chislari Iurie
                     </p>
                     <p class="company">
-                        Formația Acordeon
+                        zooHome
                     </p>
                 </div>
                 <div class="item">
                     <p class="feed">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum ex, non natus. Fugit tempore officiis aliquam, temporibus excepturi deleniti molestiae, quaerat, odit, sed ratione explicabo impedit laboriosam cumque iure recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro nobis soluta id voluptates eaque tempora animi, dolore dolorem architecto qui iusto quae necessitatibus voluptatum fuga nam, dignissimos nihil repellat ut!
+                        La început cu bugetul meu nu găseam pe nimeni care să-mi creeze o pagină webbroșură frumoasă și calitativă. Însă la fix au apărut acești tineri pe piață care făceau proiecte pentru portofoliu practic gratis. Le mulțumesc foarte mult, deoarece datorită lor am atras atenția multor clienți! Le doresc succes băieților!  
                     </p>
                     <p class="pers">
-                        Slavec Miuzec
+                        Mereută Ecaterina
                     </p>
                     <p class="company">
-                        Formația Acordeon
+                        handMade
                     </p>
                 </div>
             </div>
@@ -859,33 +863,21 @@
                 <p class="p2">Chișinău str. Florilor 4B</p>
                 <p class="p1">Telefon</p>
                 <p class="p2">+373 689 23 516</p>
-                <p class="p2">+373 692 41 848</p>
+                <p class="p2">+373 602 37 039</p>
                 <p class="p1">E-Mail</p>
-                <p class="p2">addnew.md@gmail.com</p>
+                <p class="p2">contact.designplus.md@gmail.com</p>
             </div>
             <div class="col-md-5 message">
-                <form action="" method="POST" id="form">
+                <?php 
+                    require_once('mail.php');
+                 ?>
+                <form action="" method="POST" id="myform">
                     <br><br>
-                    <input type="text" placeholder="Nume Prenume" name="name" required=""><br><br><br>
-                    <input type="text" placeholder="E-Mail" name="mail" id="mail" required=""><br><br><br>
-                    <input type="text" placeholder="Telefon" name="phone" id="phone" required=""><br><br><br><br>
-                    <textarea type="text" placeholder="Mesaj" name="message" required=""></textarea><br><br><br>
-                    <button name="submit">Trimite</button>
-                    <!-- PHP block pentru prelucrarea datelor din formular -->
-                    <?php
-                        if(isset($_POST['submit'])){
-                            $name = $_POST['name'];
-                            $mail = $_POST['mail'];
-                            $phone = $_POST['phone'];
-                            $select = $_POST['select'];
-                            $message = $_POST['message'];
-
-                            $myEmail = 'vajno.1997@gmail.com';
-                            $subject = 'Propunere de la ' . $name . ':' . ' ' .'mail:' . ' ' . $mail . '; ' . 'numar:' . ' ' . $phone . ' ' .'Tip problemă:' . $select;
-
-                            mail($myEmail, $subject, $message);
-                        }
-                    ?>
+                    <input type="text" placeholder="Nume Prenume" name="name"><br><br><br>
+                    <input type="text" placeholder="E-Mail" name="mail"><br><br><br>
+                    <input type="text" placeholder="Telefon" name="phone"><br><br><br><br>
+                    <textarea type="text" placeholder="Mesaj" name="message"></textarea><br><br><br>
+                    <button name="submit" id="submit" >Trimite</button>
                 </form>
             </div>
         </div>
@@ -929,10 +921,11 @@
         </div>
         <div class="row bottom">
             <div class="col-md-4 col-md-offset-4">
-                <p class="p1">Designed and developed with love by <a href="https://www.instagram.com/addnew.md/" target="_blank">@addnew</a> group.</p>
+                <p class="p1">Designed and developed with love by <a href="https://www.instagram.com/addnew.co/" target="_blank">@addnew</a> group.</p>
                 <p>&copy; 2017 AddNew. All right reserved.</p>
             </div>
         </div>
+    <a href="#0" class="cd-top">Top</a>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
@@ -940,10 +933,11 @@
     <script src="js/bootstrap.js"></script>
     <!-- <script src="js/stickynav.js"></script> -->
     <script src="js/owl.carousel.js"></script>
+    <script src="js/top.btn.js"></script>
+    <script src="js/top.btn-settings.js"></script>
     <script src="js/jquery.magnific-popup.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/additional-validate-methods.min.js"></script>
-    <script src="js/form_validation.js"></script>
+    <script src="js/additional-validate-methods.js"></script>
+    <script src="js/jquery.validate.js"></script>
     <script src="js/parallax.js"></script>
     <script src="js/fancybox.js"></script>
     <script type="JavaScript">
@@ -1053,7 +1047,61 @@
           midClick: true
         });
 
+        // begin validation
+
+        $("#myform").validate({
+           rules: {
+             // no quoting necessary
+             name: {
+                required: true,
+                minlength: 5
+             },
+             mail: {
+              required: true,
+              email: true
+             },
+             phone: {
+              required: true,
+              digits: true,
+              minlength: 9,
+              maxlength: 9
+
+             },
+             message: {
+                required: true,
+                minlength: 20
+             }
+           },
+           messages: {
+                       name: {
+                        required:"Numele și Prenumle sunt Obligatorii !",
+                        minlength: "Minim 5 caractere !"
+                        },
+                       mail: {
+                        required: "E-mail-ul este obligatoriu !",
+                        email: "Vă rugăm introduceți un e-mail valid !",
+                       },
+                       phone: {
+                        required: "Este necesară introducerea telefonului !",
+                        digits: "Vă rugăm să introduceți un număr corect (fără spații)!",
+                        minlength: "Numărul trebuie să conțină minim 9 cifre !",
+                        maxlength: "Numărul trebuie să conțină nu mai mult de 9 cifre !"
+                       },
+                       message: {
+                        required: "Vă rugăm să ne lăsați mesajul dorit !",
+                        minlength: "Minim 20 caractere !"
+                       }                                               
+                   }
+
+         });
     </script>
+    <!-- connect preloader -->
+    <script type="text/javascript">$(window).on('load', function () {
+        var $preloader = $('#p_prldr'),
+            $svg_anm   = $preloader.find('.svg_anm');
+        $svg_anm.fadeOut();
+        $preloader.delay(500).fadeOut('slow');
+    });</script>
 </body>
 
 </html>

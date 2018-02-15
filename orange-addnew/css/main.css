@@ -1,8 +1,122 @@
+/*startpack dp*/
+::selection {
+    color: #e94c3d;
+    background: #333;
+   }
+body::-webkit-scrollbar {
+  width: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #e94c3d;
+}
+
 body{
 	color: #fff;
 	/*font-family: 'Open Sans', sans-serif;*/
 	font-family: 'Cuprum', sans-serif;
 }
+
+.cd-top {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: rgba(233, 76, 61, 0.8) url(../img/top-arrow.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+.no-touch .cd-top:hover {
+  background-color: #e94c3d;
+  opacity: 1;
+}
+@media only screen and (min-width: 768px) {
+  .cd-top {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .cd-top {
+    height: 60px;
+    width: 60px;
+    right: 30px;
+    bottom: 30px;
+  }
+}
+/*preloader*/
+#p_prldr{
+position: fixed;
+left: 0;
+top: 0;
+right:0;
+bottom:0;
+background: #151515;
+z-index: 1000;}
+ 
+.contpre small{font-size:25px;}
+ 
+.contpre{
+width: 250px;
+height: 100px;
+position: absolute;
+left: 50%;top: 48%;
+margin-left:-125px;
+margin-top:-75px;
+color:#fff;
+font-size:40px;
+letter-spacing:-2px;
+text-align:center;
+line-height:35px;}
+ 
+#p_prldr .svg_anm {
+position: absolute;
+width: 41px;
+height: 41px;
+background: url(../img/preloader.svg) center center no-repeat;
+background-size:41px;    
+margin: -16px 0 0 -16px;}
+
+label.error{
+	color: red;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	margin-top: -17px;
+	text-align: center;
+}
+
+
+
+
+
 
 /*begin footer*/
 
