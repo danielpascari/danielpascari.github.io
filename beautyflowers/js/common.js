@@ -60,5 +60,48 @@ $( document ).ready(function() {
 
 	});
 
+
+	$( ".subcategory" ).click(function() {
+	  $( this ).toggleClass( "selected" );
+	});
+
+	$( ".filter-title" ).click(function() {
+	  $( ".icon-filter" ).toggleClass( "red" );
+	  $( ".filter" ).toggleClass( "visible" );
+
+	});
+
+	$( ".selector-iterior" ).click(function() {
+	  $( ".interior" ).toggleClass( "hidden" );
+	});
+
+	$( ".selector-exterior" ).click(function() {
+	  $( ".exterior" ).toggleClass( "hidden" );
+	});
+
+	$( ".selector-gifts" ).click(function() {
+	  $( ".gifts" ).toggleClass( "hidden" );
+	});
+
+	$( ".selector-boxes" ).click(function() {
+	  $( ".boxes" ).toggleClass( "hidden" );
+	});
+
 });
 
+$(document).ready(function () {  
+  var top = $('.filter').offset().top;
+  $(window).scroll(function (event) {
+	var y = $(this).scrollTop();
+		if (y >= top) {
+		  $('.filter').addClass('fixed');
+		} else {
+		  $('.filter').removeClass('fixed');
+		}
+		$('.filter').width($('.filter').parent().width());
+  	});
+});
+
+$(document).ready(function () { 
+new WOW().init();
+});
