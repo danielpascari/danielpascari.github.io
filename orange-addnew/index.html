@@ -944,19 +944,6 @@
         // Options for the first group 
         $('[data-fancybox="images"]').fancybox({ thumbs : { autoStart : true }, buttons : [ 'zoom', 'close' ] });
     </script>
-    <script src="js/smoth-scroll.js"></script>
-    <script>
-        $(document).ready(function() {
-            //Chrome Smooth Scroll
-            try {
-                $.browserSelector();
-                if ($("html").hasClass("chrome")) {
-                    $.smoothScroll();
-                }
-            } catch (err) {};
-        });
-
-    </script>
     <script>
         $('#owl-testimonials').owlCarousel({
             loop: true,
